@@ -1,5 +1,9 @@
 package com.korn;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array</a>
+ */
 public class FindFirstAndLastPositionOfElementInSortedArray {
     public int[] searchRange(int[] nums, int target) {
         int leftIndex = findIndex(nums, target, true);

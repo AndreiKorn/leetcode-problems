@@ -1,5 +1,9 @@
 package com.korn;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">Lowest Common Ancestor of a Binary Tree</a>
+ */
 public class LowestCommonAncestorOfABinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {

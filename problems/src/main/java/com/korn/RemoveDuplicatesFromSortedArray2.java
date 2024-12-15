@@ -1,5 +1,9 @@
 package com.korn;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/">Remove Duplicates from Sorted Array II</a>
+ */
 public class RemoveDuplicatesFromSortedArray2 {
     public int removeDuplicates(int[] nums) {
         if (nums.length <= 2) {

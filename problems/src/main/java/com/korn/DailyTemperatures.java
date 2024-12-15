@@ -2,6 +2,9 @@ package com.korn;
 
 import java.util.Stack;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/daily-temperatures/">Daily Temperatures</a>
+ */
 public class DailyTemperatures {
     public int[] dailyTemperaturesMovingBackwards(int[] temperatures) {
         int[] result = new int[temperatures.length];

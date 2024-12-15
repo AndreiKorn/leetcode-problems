@@ -3,6 +3,9 @@ package com.korn;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/binary-tree-paths/">Binary Tree Paths</a>
+ */
 public class BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new ArrayList<>();

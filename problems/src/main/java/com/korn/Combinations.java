@@ -3,6 +3,9 @@ package com.korn;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/combinations/">Combinations</a>
+ */
 public class Combinations {
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();

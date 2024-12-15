@@ -1,5 +1,8 @@
 package com.korn;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/maximum-subarray/">Maximum Subarray</a>
+ */
 public class MaximumSubarray {
     public int maxSubArray(int[] nums) {
         int currentSum = nums[0];

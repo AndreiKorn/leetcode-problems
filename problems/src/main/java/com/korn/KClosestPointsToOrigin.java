@@ -2,6 +2,9 @@ package com.korn;
 
 import java.util.PriorityQueue;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/k-closest-points-to-origin/">K Closest Points to Origin</a>
+ */
 public class KClosestPointsToOrigin {
     public int[][] kClosest(int[][] points, int k) {
         PriorityQueue<int[]> heap = new PriorityQueue<>((int[] first, int[] second) ->

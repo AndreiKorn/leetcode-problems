@@ -1,5 +1,8 @@
 package com.korn;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/word-search/">Word Search</a>
+ */
 public class WordSearch {
     private static final int[][] MOVES = new int[][]{{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 

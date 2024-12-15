@@ -5,6 +5,10 @@ import java.util.Deque;
 import java.util.Map;
 import java.util.function.BiFunction;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a>
+ */
 public class EvaluateReversePolishNotation {
     private static final Map<String, BiFunction<Integer, Integer, Integer>> OPERATIONS = Map.of(
             "+", Integer::sum,

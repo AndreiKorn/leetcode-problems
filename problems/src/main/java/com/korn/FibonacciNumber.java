@@ -1,5 +1,8 @@
 package com.korn;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/fibonacci-number/">Fibonacci Number</a>
+ */
 public class FibonacciNumber {
     public int fib(int n) {
         if (n == 0 || n == 1) {

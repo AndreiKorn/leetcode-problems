@@ -3,6 +3,9 @@ package com.korn;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/number-of-recent-calls/">Number of Recent Calls</a>
+ */
 public class NumberOfRecentCalls {
     static class RecentCounter {
         private final Deque<Integer> pings = new ArrayDeque<>();

@@ -1,5 +1,9 @@
 package com.korn;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/longest-increasing-path-in-a-matrix/">Longest Increasing Path in a Matrix</a>
+ */
 public class LongestIncreasingPathInAMatrix {
     private static final int[][] MOVES = new int[][]{{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
@@ -20,7 +24,7 @@ public class LongestIncreasingPathInAMatrix {
         if (pathLengths[row][col] != 0) {
             return pathLengths[row][col];
         }
-        
+
         int longestPath = 0;
         for (int[] move : MOVES) {
             int nextRow = row + move[0];

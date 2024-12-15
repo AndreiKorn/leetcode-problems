@@ -1,5 +1,8 @@
 package com.korn;
 
+/**
+ * Solution for <a href="https://leetcode.com/problems/burst-balloons/">Burst Balloons</a>
+ */
 public class BurstBalloons {
     public int maxCoins(int[] nums) {
         int n = nums.length;

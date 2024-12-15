@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Objects;
 
+/**
+ * Solution for 
+ * <a href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/">Remove All Adjacent Duplicates In String</a>
+ */
 public class RemoveAllAdjacentDuplicatesInString {
     public String removeDuplicatesWithStack(String s) {
         Deque<Character> stack = new ArrayDeque<>();
