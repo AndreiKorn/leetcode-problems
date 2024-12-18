@@ -23,7 +23,7 @@ class RemoveDuplicatesFromSortedArray2Test {
     static Stream<Arguments> removeDuplicates() {
         return Stream.of(
                 Arguments.of(new int[]{1, 1, 1, 2, 2, 3}, new int[]{1, 1, 2, 2, 3, 3}, 5),
-                Arguments.of(new int[]{0, 0, 1, 1, 1, 1, 2, 3, 3}, new int[]{0, 0, 1, 1, 2, 3, 3}, 7),
+                Arguments.of(new int[]{0, 0, 1, 1, 1, 1, 2, 3, 3}, new int[]{0, 0, 1, 1, 2, 3}, 7),
                 Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1}, new int[]{1, 1}, 2),
                 Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 2}, new int[]{1, 1, 2}, 3),
                 Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 2, 2}, new int[]{1, 1, 2, 2}, 4),
