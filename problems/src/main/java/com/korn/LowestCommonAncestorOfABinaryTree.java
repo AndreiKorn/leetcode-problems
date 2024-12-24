@@ -1,7 +1,9 @@
 package com.korn;
 
+import com.korn.model.TreeNode;
+
 /**
- * Solution for 
+ * Solution for
  * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">Lowest Common Ancestor of a Binary Tree</a>
  */
 public class LowestCommonAncestorOfABinaryTree {
@@ -20,15 +22,5 @@ public class LowestCommonAncestorOfABinaryTree {
         }
 
         return root;
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }

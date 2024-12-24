@@ -2,11 +2,12 @@ package com.korn;
 
 import java.util.stream.Stream;
 
-import com.korn.MergeTwoSortedLists.ListNode;
+import com.korn.model.ListNode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static com.korn.utils.ListNodeUtils.createList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MergeTwoSortedListsTest {
@@ -30,15 +31,5 @@ class MergeTwoSortedListsTest {
                 Arguments.of(createList(1, 4, 6), createList(2, 5, 8), createList(1, 2, 4, 5, 6, 8)),
                 Arguments.of(createList(4, 8, 15, 42), createList(16, 23), createList(4, 8, 15, 16, 23, 42))
         );
-    }
-
-    private static ListNode createList(int... values) {
-        ListNode dummy = new ListNode();
-        ListNode current = dummy;
-        for (int value : values) {
-            current.next = new ListNode(value);
-            current = current.next;
-        }
-        return dummy.next;
     }
 }

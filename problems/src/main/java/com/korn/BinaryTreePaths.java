@@ -3,6 +3,8 @@ package com.korn;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.korn.model.TreeNode;
+
 /**
  * Solution for <a href="https://leetcode.com/problems/binary-tree-paths/">Binary Tree Paths</a>
  */
@@ -35,24 +37,5 @@ public class BinaryTreePaths {
 
     private boolean isLeaf(TreeNode node) {
         return node.left == null && node.right == null;
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

@@ -1,6 +1,6 @@
 package com.korn;
 
-import java.util.Objects;
+import com.korn.model.ListNode;
 
 /**
  * Solution for <a href="https://leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a>
@@ -28,34 +28,5 @@ public class MergeTwoSortedLists {
         }
 
         return dummy.next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            ListNode listNode = (ListNode) o;
-            return val == listNode.val && Objects.equals(next, listNode.next);
-        }
     }
 }

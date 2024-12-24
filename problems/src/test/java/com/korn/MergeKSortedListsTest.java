@@ -2,11 +2,13 @@ package com.korn;
 
 import java.util.stream.Stream;
 
-import com.korn.MergeKSortedLists.ListNode;
+import com.korn.model.ListNode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static com.korn.utils.ListNodeUtils.createList;
+import static com.korn.utils.ListNodeUtils.createLists;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MergeKSortedListsTest {
@@ -43,23 +45,5 @@ class MergeKSortedListsTest {
                         createList(1, 1, 2, 3, 4, 4, 5, 6)
                 )
         );
-    }
-
-    private static ListNode[] createLists(int[]... values) {
-        ListNode[] lists = new ListNode[values.length];
-        for (int i = 0; i < values.length; i++) {
-            lists[i] = createList(values[i]);
-        }
-        return lists;
-    }
-
-    private static ListNode createList(int... values) {
-        ListNode dummy = new ListNode();
-        ListNode current = dummy;
-        for (int value : values) {
-            current.next = new ListNode(value);
-            current = current.next;
-        }
-        return dummy.next;
     }
 }
