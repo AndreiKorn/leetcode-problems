@@ -23,4 +23,28 @@ public class ListNodeUtils {
         }
         return dummy.next;
     }
+
+    public static ListNode createListWithCycle(int[] values, int position) {
+        if (values.length <= position) {
+            throw new IllegalArgumentException(
+                    "Cycle element position is out of boundaries. List length: " + values.length
+                            + ", position: " + position
+            );
+        }
+
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
+        ListNode cycleNode = null;
+        for (int i = 0; i < values.length; i++) {
+            ListNode nextNode = new ListNode(values[i]);
+            current.next = nextNode;
+            current = nextNode;
+            if (i == position) {
+                cycleNode = current;
+            }
+        }
+        current.next = cycleNode;
+
+        return dummy.next;
+    }
 }
