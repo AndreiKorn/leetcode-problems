@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static com.korn.utils.TreeNodeUtils.createTree;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class LowestCommonAncestorOfABinaryTreeTest {
@@ -31,28 +32,5 @@ class LowestCommonAncestorOfABinaryTreeTest {
     private static Arguments createArgument(Integer[] values, int pIndex, int qIndex, int resultIndex) {
         TreeNode[] nodes = createTree(values);
         return Arguments.of(nodes[0], nodes[pIndex], nodes[qIndex], nodes[resultIndex]);
-    }
-
-    private static TreeNode[] createTree(Integer[] values) {
-        TreeNode[] nodes = new TreeNode[values.length];
-        for (int i = 0; i < values.length; i++) {
-            nodes[i] = values[i] == null ? null : new TreeNode(values[i]);
-        }
-
-        for (int i = 0; i < values.length; i++) {
-            if (nodes[i] == null) {
-                continue;
-            }
-
-            if (2 * i + 1 < values.length) {
-                nodes[i].left = nodes[2 * i + 1];
-            }
-
-            if (2 * i + 2 < values.length) {
-                nodes[i].right = nodes[2 * i + 2];
-            }
-        }
-
-        return nodes;
     }
 }
