@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static com.korn.utils.TreeNodeUtils.createTree;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MaximumDepthOfBinaryTreeTest {
@@ -21,63 +22,17 @@ class MaximumDepthOfBinaryTreeTest {
     static Stream<Arguments> maxDepth() {
         return Stream.of(
                 Arguments.of(null, 0),
-                Arguments.of(new TreeNode(1), 1),
-                Arguments.of(new TreeNode(1, new TreeNode(2), null), 2),
-                Arguments.of(new TreeNode(1, null, new TreeNode(3)), 2),
+                Arguments.of(createTree(1)[0], 1),
+                Arguments.of(createTree(1, 2)[0], 2),
+                Arguments.of(createTree(1, null, 3)[0], 2),
+                Arguments.of(createTree(1, 2, 3, 4, 5, 6, 7)[0], 3),
+                Arguments.of(createTree(3, 9, 20, null, null, 15, 7)[0], 3),
+                Arguments.of(createTree(1, null, 2)[0], 2),
                 Arguments.of(
-                        new TreeNode(
-                                1,
-                                new TreeNode(
-                                        2,
-                                        new TreeNode(4),
-                                        new TreeNode(5)
-                                ),
-                                new TreeNode(
-                                        3,
-                                        new TreeNode(6),
-                                        new TreeNode(7)
-                                )
-                        ),
-                        3
-                ),
-                Arguments.of(
-                        new TreeNode(
-                                3,
-                                new TreeNode(9),
-                                new TreeNode(
-                                        20,
-                                        new TreeNode(15),
-                                        new TreeNode(7)
-                                )
-                        ),
-                        3
-                ),
-                Arguments.of(
-                        new TreeNode(
-                                1,
-                                null,
-                                new TreeNode(2)
-                        ),
-                        2
-                ),
-                Arguments.of(
-                        new TreeNode(
-                                1,
-                                null,
-                                new TreeNode(
-                                        2,
-                                        null,
-                                        new TreeNode(
-                                                3,
-                                                null,
-                                                new TreeNode(
-                                                        4,
-                                                        null,
-                                                        new TreeNode(5)
-                                                )
-                                        )
-                                )
-                        ),
+                        createTree(
+                                1, null, 2, null, null, null, 3, null, null, null, null, null, null, null, 4, null,
+                                null, null, null, null, null, null, null, null, null, null, null, null, null, null, 5
+                        )[0],
                         5
                 )
         );

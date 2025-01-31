@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static com.korn.utils.TreeNodeUtils.createTree;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BinaryTreePreorderTraversalTest {
@@ -22,25 +23,14 @@ class BinaryTreePreorderTraversalTest {
     static Stream<Arguments> preorderTraversal() {
         return Stream.of(
                 Arguments.of(null, List.of()),
-                Arguments.of(new TreeNode(1), List.of(1)),
-                Arguments.of(new TreeNode(1, new TreeNode(2), null), List.of(1, 2)),
-                Arguments.of(new TreeNode(1, null, new TreeNode(2)), List.of(1, 2)),
-                Arguments.of(new TreeNode(1, new TreeNode(2), new TreeNode(3)), List.of(1, 2, 3)),
-                Arguments.of(new TreeNode(1, new TreeNode(2, new TreeNode(3), null), null), List.of(1, 2, 3)),
-                Arguments.of(new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null)), List.of(1, 2, 3)),
-                Arguments.of(new TreeNode(1, new TreeNode(3), new TreeNode(2)), List.of(1, 3, 2)),
-                Arguments.of(
-                        new TreeNode(
-                                1,
-                                new TreeNode(
-                                        2,
-                                        new TreeNode(4),
-                                        new TreeNode(5)
-                                ),
-                                new TreeNode(3, null, new TreeNode(6))
-                        ),
-                        List.of(1, 2, 4, 5, 3, 6)
-                )
+                Arguments.of(createTree(1)[0], List.of(1)),
+                Arguments.of(createTree(1, 2)[0], List.of(1, 2)),
+                Arguments.of(createTree(1, null, 2)[0], List.of(1, 2)),
+                Arguments.of(createTree(1, 2, 3)[0], List.of(1, 2, 3)),
+                Arguments.of(createTree(1, 2, null, 3)[0], List.of(1, 2, 3)),
+                Arguments.of(createTree(1, null, 2, null, null, 3)[0], List.of(1, 2, 3)),
+                Arguments.of(createTree(1, 3, 2)[0], List.of(1, 3, 2)),
+                Arguments.of(createTree(1, 2, 3, 4, 5, null, 6)[0], List.of(1, 2, 4, 5, 3, 6))
         );
     }
 }

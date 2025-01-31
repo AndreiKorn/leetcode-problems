@@ -3,7 +3,7 @@ package com.korn.utils;
 import com.korn.model.TreeNode;
 
 public class TreeNodeUtils {
-    public static TreeNode[] createTree(Integer[] values) {
+    public static TreeNode[] createTree(Integer... values) {
         TreeNode[] nodes = new TreeNode[values.length];
         for (int i = 0; i < values.length; i++) {
             nodes[i] = values[i] == null ? null : new TreeNode(values[i]);

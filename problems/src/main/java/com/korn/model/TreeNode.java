@@ -1,6 +1,7 @@
 package com.korn.model;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class TreeNode {
     public int val;
@@ -35,5 +36,14 @@ public class TreeNode {
     @Override
     public int hashCode() {
         return Objects.hash(val, left, right);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", TreeNode.class.getSimpleName() + "[", "]")
+                .add("val=" + val)
+                .add("left=" + left)
+                .add("right=" + right)
+                .toString();
     }
 }
