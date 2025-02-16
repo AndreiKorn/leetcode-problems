@@ -1,6 +1,7 @@
 package com.korn.model;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class ListNode {
     public int val;
@@ -33,5 +34,13 @@ public class ListNode {
     @Override
     public int hashCode() {
         return Objects.hash(val, next);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", ListNode.class.getSimpleName() + "[", "]")
+                .add("val=" + val)
+                .add("next=" + next)
+                .toString();
     }
 }
